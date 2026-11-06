@@ -6,11 +6,11 @@
 /*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 13:34:07 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/04 15:38:18 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/06 12:11:20 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *destination, const void *source, size_t size)
 {
@@ -32,20 +32,17 @@ void	*ft_memmove(void *destination, const void *source, size_t size)
 	else
 	{
 		while (size-- > 0)
-		{
 			*d++ = *s++;
-		}
 	}
 	return (destination);
 }
 
-/*
+
 int	main(void)
 {
 	char	str[] = "ABCDEFGHIJ";
 
-	ft_memmove(str + 2, str, 8);
+	ft_memmove(str + 2, str, 10);
 	__builtin_printf("%s\n", str);
 	return (0);
 }
-*/
