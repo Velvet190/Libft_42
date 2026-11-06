@@ -6,7 +6,7 @@
 /*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 10:38:10 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/04 11:54:06 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/06 14:49:39 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ int	main(void)
 	char	src[] = "Hello World";
 	char	dest[20] = "";
 
-	printf("Et voila le retour de la taille totale de la chaîne qu elle a tenté de créer :
+	printf("Et voila le retour de la taille totale de la chaîne 
+	qu elle a tenté de créer :
 		%zu\n", ft_strlcpy(dest, src, 5));
 	printf("Voila la destination : %s\n", dest);
 }

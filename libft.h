@@ -6,7 +6,7 @@
 /*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 11:53:49 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/04 14:35:38 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/06 15:37:02 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 #define LIBFT_H
 #ifdef LIBFT_H
+
+void	*ft_memset(void *ptr, int value, size_t num);
 
 #endif
