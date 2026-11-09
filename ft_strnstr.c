@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 13:07:36 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/06 14:47:00 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:22:35 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,11 @@ void	test_strnstr(const char *big, const char *little, size_t len)
 
 int	main(void)
 {
-	char big[] = "bonjour je suis un test";
-	char big2[] = "aaaaaaa";
-	char big3[] = "abc";
-	char big4[] = "abcdefgh";
-	char big5[] = "hello";
+	char	big[] = "bonjour je suis un test";
+	char	big2[] = "aaaaaaa";
+	char	big3[] = "abc";
+	char	big4[] = "abcdefgh";
+	char	big5[] = "hello";
 
 	test_strnstr(big, "bonjour", 23);
 	test_strnstr(big, "je suis", 23);
@@ -79,22 +79,17 @@ int	main(void)
 	test_strnstr(big, "", 0);
 	test_strnstr(big, "", 23);
 	test_strnstr(big, "test", 22);
-
 	test_strnstr(big2, "aaa", 7);
 	test_strnstr(big2, "aaaaaaa", 7);
 	test_strnstr(big2, "aaaaaaaa", 7);
-
 	test_strnstr(big3, "bc", 3);
 	test_strnstr(big3, "bc", 2);
 	test_strnstr(big3, "abc", 3);
-
 	test_strnstr(big4, "def", 6);
 	test_strnstr(big4, "def", 5);
 	test_strnstr(big4, "fgh", 8);
-
 	test_strnstr(big5, "lo", 5);
 	test_strnstr(big5, "llo", 4);
-
 	return (0);
 }
 */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 16:28:22 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/04 16:50:49 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:22:37 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_strchr(const char *str, int c)
 int	main(void)
 {
 	char	str[] = "Je suis moi meme et pas celui qui evolue dans le paraitre.";
+
 	__builtin_printf("%s\n", ft_strchr(str, 'a'));
 }
 */

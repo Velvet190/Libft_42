@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 13:34:07 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/06 10:58:27 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:22:17 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 int	main(void)
 {
-	char src[] = "Salut";
-	char dest[100];
+	char	src[] = "Salut";
+	char	dest[100];
+
 	ft_memcpy(dest, src, 5);
 	printf("%s", dest);
 }

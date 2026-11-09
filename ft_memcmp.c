@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 12:43:15 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/06 13:06:00 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:22:16 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,12 @@ void	test_memcmp(const void *s1, const void *s2, size_t n)
 
 int	main(void)
 {
-	char s1[] = "bonjour";
-	char s2[] = "bonjour";
-	char s3[] = "bonsoir";
-	char s4[] = "bonjoux";
-
-	unsigned char s5[] = {0x80, 0xFF, 0x00};
-	unsigned char s6[] = {0x7F, 0xFF, 0x00};
+	char			s1[] = "bonjour";
+	char			s2[] = "bonjour";
+	char			s3[] = "bonsoir";
+	char			s4[] = "bonjoux";
+	unsigned char	s5[] = {0x80, 0xFF, 0x00};
+	unsigned char	s6[] = {0x7F, 0xFF, 0x00};
 
 	test_memcmp(s1, s2, 7);
 	test_memcmp(s1, s3, 7);
@@ -67,7 +66,6 @@ int	main(void)
 	test_memcmp(s1, s3, 1);
 	test_memcmp(s5, s6, 3);
 	test_memcmp(s5, s6, 0);
-
 	return (0);
 }
 */
