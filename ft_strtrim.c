@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 16:23:31 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/09 23:12:03 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/10 13:45:38 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	dbt = 0;
 	j = 0;
-    if (!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	end = ft_strlen(s1);
 	while (dbt < end && ft_verif(s1[dbt], set))
@@ -61,7 +61,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res = malloc(end - dbt + 1);
 	if (!res)
 		return (NULL);
-    while (dbt < end)
+	while (dbt < end)
 	{
 		res[j] = s1[dbt];
 		dbt++;
@@ -147,4 +147,3 @@ int	main(void)
 	test("abcabcabc", "ac", 25);
 	return (0);
 }
-
