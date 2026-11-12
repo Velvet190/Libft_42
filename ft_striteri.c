@@ -6,24 +6,26 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 16:02:58 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/10 16:33:04 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/12 04:40:01 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    unsigned int  i = 0;
-    if (!s || !f)
-        return ;
-    while (s[i])
-    {
-        f(i, s + i);
-        i++;
-    }
-}
+	unsigned int	i;
 
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i])
+	{
+		f(i, s + i);
+		i++;
+	}
+}
+/*
 #include <stdio.h>
 
 void	toupper_if_even(unsigned int i, char *c)
@@ -36,9 +38,10 @@ void	toupper_if_even(unsigned int i, char *c)
 
 int	main(void)
 {
-	char str[] = "bonjour";
+	char	str[] = "bonjour";
 
 	ft_striteri(str, toupper_if_even);
 	printf("%s\n", str); // Affiche "BoNjOuR"
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 18:08:07 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/10 19:45:31 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/12 04:39:00 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_itoaa(int value, char *str, int base)
 		*str = (reste - 10) + 'a';
 	else
 		*str = reste + '0';
-    str[1] = '\0';
+	str[1] = '\0';
 	return (str + 1);
 }
 
