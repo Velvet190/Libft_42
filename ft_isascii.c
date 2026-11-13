@@ -6,11 +6,11 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 16:03:21 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/09 13:17:58 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/13 16:33:42 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

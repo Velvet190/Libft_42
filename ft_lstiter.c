@@ -6,38 +6,40 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 20:14:54 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/12 21:53:40 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/13 16:48:35 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    if (!lst||!f)
+	t_list	*tmp;
+
+	if (!lst || !f)
 		return ;
-    t_list *tmp = lst;
-    while (tmp != NULL)
-    {
-        f((*tmp).content);
-        tmp = (*tmp).next;
-    }
+	tmp = lst;
+	while (tmp != NULL)
+	{
+		f((*tmp).content);
+		tmp = (*tmp).next;
+	}
 }
 
 /*
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 // Pas de libft.h : on definit tout ici
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 // Ta fonction (dans ft_lstiter.c)
-void	ft_lstiter(t_list *lst, void (*f)(void *));
+void				ft_lstiter(t_list *lst, void (*f)(void *));
 
 // Fonctions d'aide du test (noms differents pour ne pas entrer en conflit)
 static t_list	*my_lstnew(void *content)
@@ -84,18 +86,20 @@ static void	my_lstclear(t_list **lst, void (*del)(void *))
 }
 
 // ---------- mini framework ----------
-static int g_fail = 0;
-static int g_total = 0;
+static int			g_fail = 0;
+static int			g_total = 0;
 
 #define CHECK(cond, msg) do { \
+
 	g_total++; \
 	if (cond) printf("  \033[32m[OK]\033[0m %s\n", msg); \
-	else { printf("  \033[31m[KO]\033[0m %s  (ligne %d)\n", msg, __LINE__); g_fail++; } \
+	else { printf("  \033[31m[KO]\033[0m %s  (ligne %d)\n", msg,
+		__LINE__); g_fail++; } \
 } while (0)
 
 // ---------- fonctions passees a ft_lstiter ----------
-static int		g_calls = 0;
-static void		*g_seen[200000];
+static int			g_calls = 0;
+static void			*g_seen[200000];
 
 static void	record(void *content)
 {
@@ -157,8 +161,9 @@ static void	test_null_list(void)
 static void	test_null_f(void)
 {
 	t_list	*lst;
-	int		a = 1;
+	int		a;
 
+	a = 1;
 	printf("\n[2] f NULL\n");
 	lst = my_lstnew(&a);
 	ft_lstiter(lst, NULL);
@@ -171,8 +176,9 @@ static void	test_null_f(void)
 static void	test_single(void)
 {
 	t_list	*lst;
-	int		a = 41;
+	int		a;
 
+	a = 41;
 	printf("\n[3] Un seul element\n");
 	reset();
 	lst = my_lstnew(&a);
@@ -279,8 +285,9 @@ static void	test_list_intact(void)
 static void	test_same_content(void)
 {
 	t_list	*lst;
-	int		a = 0;
+	int		a;
 
+	a = 0;
 	printf("\n[8] Meme pointeur content dans plusieurs maillons\n");
 	lst = my_lstnew(&a);
 	my_lstadd_back(&lst, my_lstnew(&a));
@@ -296,11 +303,13 @@ static void	test_big_list(void)
 {
 	t_list	*lst;
 	t_list	*last;
-	int		n = 100000;
+	int		n;
 	int		i;
 	int		*val;
 	int		ok;
+	t_list	*node;
 
+	n = 100000;
 	printf("\n[9] Grande liste (%d elements)\n", n);
 	val = calloc(n, sizeof(int));
 	lst = NULL;
@@ -308,7 +317,7 @@ static void	test_big_list(void)
 	i = 0;
 	while (i < n)
 	{
-		t_list *node = my_lstnew(&val[i]);
+		node = my_lstnew(&val[i]);
 		if (!last)
 			lst = node;
 		else
@@ -333,15 +342,18 @@ static void	test_big_list(void)
 static void	test_twice(void)
 {
 	t_list	*lst;
-	int		a = 0;
-	int		b = 10;
+	int		a;
+	int		b;
 
+	a = 0;
+	b = 10;
 	printf("\n[10] Appels successifs sur la meme liste\n");
 	lst = my_lstnew(&a);
 	my_lstadd_back(&lst, my_lstnew(&b));
 	ft_lstiter(lst, increment);
 	ft_lstiter(lst, increment);
-	CHECK(a == 2 && b == 12, "la liste est reutilisable apres un premier appel");
+	CHECK(a == 2 && b == 12,
+		"la liste est reutilisable apres un premier appel");
 	my_lstclear(&lst, noop);
 }
 

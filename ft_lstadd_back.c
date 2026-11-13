@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 18:16:55 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/12 19:02:12 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/13 16:44:10 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	(*tmp).next = new;
 }
-
+/*
 #include <stdlib.h>
 
 unsigned int	ft_lstsize(t_list *lst)
@@ -60,7 +60,6 @@ t_list	*ft_lstnew(void *content)
 	return (new);
 }
 
-/*
 #include <stdio.h>
 #include <stdlib.h>
 
