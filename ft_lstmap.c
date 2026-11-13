@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 14:34:16 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/13 16:48:03 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/13 17:14:45 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	first = NULL;
 	while (lst)
 	{
-		new = ft_lstnew((*f)(lst->content)) if (!new)
+		new = ft_lstnew((*f)(lst->content));
+		if (!new)
 		{
 			while (first)
 			{
