@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   strchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/04 16:07:30 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/04 16:33:06 by vlaval-a         ###   ########.fr       */
+/*   Created: 2026/11/16 18:41:15 by velvet            #+#    #+#             */
+/*   Updated: 2026/11/16 18:41:20 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != c)
-		i++;
-	return ((char *)str + i);
+	while (*s)
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }
-/*
-int	main(void)
-{
-	char	str[] = "Je suis moi meme et pas celui qui evolue dans le paraitre.";
-
-	ft_strchr(str, 'o');
-	__builtin_printf("%s\n", ft_strchr(str, 'c'));
-}
-*/

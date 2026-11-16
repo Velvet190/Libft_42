@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 15:46:20 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/02 16:18:37 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/16 19:08:24 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isalnum(char c)
 {
 	if ((c <= '9' && c >= '0') || (c >= 'a' && c <= 'z') || (c >= 'A'
 			&& c <= 'Z'))

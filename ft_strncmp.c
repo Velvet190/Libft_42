@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 16:55:47 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/06 14:49:53 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/17 00:44:06 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*n_s1;
+	unsigned char	*n_s2;
 
+	n_s1 = (unsigned char *)s1;
+	n_s2 = (unsigned char *)s2;
 	i = 0;
-	while (s1 && s2 && s1[i] == s2[i] && i < n)
+	while (n_s1 && n_s2 && n_s1[i] == n_s2[i] && i < n)
 		i++;
-	if (s1[i] == '\0' || s2[i] == '\0' || (i == n))
+	if (i == n)
 		return (0);
-	else if (s1[i] > s2[i])
-		return (s1[i] - s2[i]);
-	else if (s1[i] < s2[i])
-		return (s1[i] - s2[i]);
+	else if (n_s1[i] > n_s2[i])
+		return (n_s1[i] - n_s2[i]);
+	else if (n_s1[i] < n_s2[i])
+		return (n_s1[i] - n_s2[i]);
 	return (0);
 }
 /*

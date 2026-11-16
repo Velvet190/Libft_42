@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 13:45:23 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/12 04:51:33 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/16 19:02:06 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ char	**ft_split(char const *s, char c)
 	int		ct;
 	char	**result;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	j = 0;
 	old = 0;

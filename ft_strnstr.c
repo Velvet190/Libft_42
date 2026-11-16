@@ -6,23 +6,11 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 13:07:36 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/09 14:22:35 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/17 00:46:39 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

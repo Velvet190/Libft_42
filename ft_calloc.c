@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 15:24:21 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/09 14:22:01 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/16 19:51:38 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,11 @@ void	*ft_calloc(size_t num, size_t size)
 	void	*ptr;
 	void	*res;
 
+	if (num != 0 && size > (size_t)-1 / num)
+		return (NULL);
 	ptr = malloc(num * size);
+	if (!ptr)
+		return (NULL);
 	res = ft_memset(ptr, 0, size);
 	return (res);
 }

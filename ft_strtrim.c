@@ -6,25 +6,13 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 16:23:31 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/12 04:40:25 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/16 15:21:39 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 #include <string.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 size_t	ft_verif(char c1, char const *set)
 {

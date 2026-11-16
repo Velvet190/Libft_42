@@ -6,24 +6,12 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 13:26:49 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/09 16:22:37 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/17 00:46:48 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i + 1);
-}
 
 char	*ft_strdup(const char *s)
 {
@@ -31,17 +19,24 @@ char	*ft_strdup(const char *s)
 	size_t			j;
 	char			*res;
 	unsigned char	*n_s;
+	char			*ree;
 
 	n_s = (unsigned char *)s;
+	if (!s)
+	{
+		ree = malloc(1);
+		ree[0] = '\0';
+		return (ree);
+	}
 	i = ft_strlen(s);
 	j = 0;
-	res = malloc(i);
+	res = malloc(i + 1);
 	while (j < i)
 	{
 		res[j] = n_s[j];
 		j++;
 	}
-	res[j + 1] = '\0';
+	res[j] = '\0';
 	return (res);
 }
 /*
@@ -86,7 +81,6 @@ int	main(void)
 	test_strdup("!@#$%^&*()_+-=");
 	test_strdup("\t\n\r");
 	test_strdup("a\0b");
-
 	return (0);
 }
  */

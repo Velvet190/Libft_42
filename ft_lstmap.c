@@ -6,57 +6,12 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 14:34:16 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/13 17:14:45 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/16 15:08:49 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-void	ft_lstclear(t_list **lst, void (*del)(void *))
-{
-	t_list	*tmp;
-
-	if (!del || !lst)
-		return ;
-	while (*lst != NULL)
-	{
-		tmp = (*lst)->next;
-		del(*lst);
-		*lst = tmp;
-	}
-}
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list	*tmp;
-
-	if (!*lst)
-	{
-		*lst = new;
-		return ;
-	}
-	tmp = *lst;
-	if (!new || !lst)
-		return ;
-	while ((*tmp).next != NULL)
-	{
-		tmp = (*tmp).next;
-	}
-	(*tmp).next = new;
-}
-
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*new;
-
-	new = malloc(sizeof(t_list));
-	if (new == NULL)
-		return (NULL);
-	(*new).content = content;
-	(*new).next = NULL;
-	return (new);
-}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

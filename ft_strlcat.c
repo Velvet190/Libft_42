@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 11:33:06 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/13 17:23:15 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/17 00:31:07 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,22 @@ size_t	ft_strlenn(char *str, const char *strr)
 	return (i + j);
 }
 
-size_t	ft_strlenmini(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
+	size_t	tot;
 
 	i = 0;
 	j = 0;
-	if (ft_strlenmini(dst) >= dstsize)
-		return (ft_strlenmini(dst) + dstsize);
+	tot = ft_strlen(dst) + ft_strlen(src);
+	if (strlen(dst) >= dstsize)
+		return (dstsize + ft_strlen(src));
+	if (ft_strlen(dst) >= dstsize)
+		return (tot);
 	while (i < dstsize)
 	{
-		while (dst[i] != '\0')
+		while (dst[i] != '\0' && i < dstsize)
 			i++;
 		while (src[j] != '\0' && i < dstsize)
 		{
@@ -56,9 +50,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 			i++;
 		}
 		dst[i] = '\0';
-		return (ft_strlenn(dst, src));
+		return (tot);
 	}
-	return (ft_strlenn(dst, src));
+	return (tot);
 }
 /*
 #include <bsd/string.h>

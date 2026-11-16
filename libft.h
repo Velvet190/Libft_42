@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 11:53:49 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/16 00:52:28 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/16 18:34:28 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_toupper(int c);
+int					ft_tolower(int c);
 
 /* String functions */
 size_t				ft_strlen(const char *s);
