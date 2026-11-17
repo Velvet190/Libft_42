@@ -3,40 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/06 15:24:21 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/16 19:51:38 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:16:11 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 19:07:05 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int value, size_t num)
-{
-	unsigned char	*p;
-	size_t			i;
-
-	i = 0;
-	p = (unsigned char *)ptr;
-	while (i < num)
-	{
-		p[i] = (unsigned char)value;
-		i++;
-	}
-	return (ptr);
-}
-
-void	*ft_calloc(size_t num, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 	void	*res;
 
-	if (num != 0 && size > (size_t)-1 / num)
+	if (size == 0)
+		return (malloc(0));
+	if (size * nmemb / size != nmemb)
 		return (NULL);
-	ptr = malloc(num * size);
+	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
 	res = ft_memset(ptr, 0, size);

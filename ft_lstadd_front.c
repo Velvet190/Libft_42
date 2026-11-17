@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/12 15:38:22 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/12 15:49:23 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:16:57 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:21:16 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(void)
 
 	lst = ft_lstnew("Erasmus");
 	new1 = ft_lstnew("Julie");
-	new2 = ft_lstnew("Velvet");
+	new2 = ft_lstnew("vlaval-a");
 	if (!lst || !new1 || !new2)
 		return (1);
 	ft_lstadd_front(&lst, new1);

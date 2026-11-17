@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/04 16:28:22 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/16 18:41:23 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:20:00 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:41:53 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 /*
 int	main(void)
 {
-	char	str[] = "Je suis moi meme et pas celui qui evolue dans le paraitre.";
+	char	str[] = "Je suis moi meme.";
 
 	__builtin_printf("%s\n", ft_strchr(str, 'a'));
 }

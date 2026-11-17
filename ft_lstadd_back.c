@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/12 18:16:55 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/13 16:44:10 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:16:46 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:55:28 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	main(void)
 	ft_lstadd_back(&lst, new);
 	printf("Test 2 - Deux elements : %u element(s)\n", ft_lstsize(lst));
 	// TEST 3 : Plusieurs ajouts
-	new = ft_lstnew("Velvet");
+	new = ft_lstnew("vlaval-a");
 	if (!new)
 		return (1);
 	ft_lstadd_back(&lst, new);

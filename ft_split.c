@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/10 13:45:23 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/17 13:20:56 by vlaval-a         ###   ########.fr       */
+/*   Created: 2026/11/17 18:18:54 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:47:22 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
-int	ft_cntword(const char *str, char sep)
+static int	ft_cntword(const char *str, char sep)
 {
 	int	i;
 	int	cnt;
@@ -40,7 +39,7 @@ int	ft_cntword(const char *str, char sep)
 	return (cnt);
 }
 
-size_t	ft_strlensp(const char *str, char sep, int old)
+static size_t	ft_strlensp(const char *str, char sep, int old)
 {
 	size_t	i;
 
@@ -57,7 +56,7 @@ size_t	ft_strlensp(const char *str, char sep, int old)
 	return (i);
 }
 
-size_t	ft_strlensp2(const char *str, char sep, int old)
+static size_t	ft_strlensp2(const char *str, char sep, int old)
 {
 	while (str[old] == sep)
 	{
@@ -70,7 +69,7 @@ size_t	ft_strlensp2(const char *str, char sep, int old)
 	return (old);
 }
 
-void	ft_strprt(const char *str, char *cas, int len, char sep)
+static void	ft_strprt(const char *str, char *cas, int len, char sep)
 {
 	int	i;
 

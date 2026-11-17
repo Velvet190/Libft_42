@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/12 20:14:54 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/13 17:13:52 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:17:12 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:55:41 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 }
 /*
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
 
-static int	g_total = 0;
-static int	g_fail = 0;
-static int	g_calls = 0;
-static int	g_order = 0;
+static int		g_total = 0;
+static int		g_fail = 0;
+static int		g_calls = 0;
+static int		g_order = 0;
 
 static void	check(int condition, char *msg, int line)
 {

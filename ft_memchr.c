@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/04 17:18:49 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/06 14:50:07 by vlaval-a         ###   ########.fr       */
+/*   Created: 2026/11/17 18:17:47 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:33:03 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

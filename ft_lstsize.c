@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/12 15:51:43 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/12 17:29:12 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:17:36 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:55:56 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,41 +51,34 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 
 int	main(void)
 {
-	t_list *lst;
-	t_list *one;
-	t_list *two;
-	t_list *three;
+	t_list	*lst;
+	t_list	*one;
+	t_list	*two;
+	t_list	*three;
 
 	// TEST 1 : Liste vide
 	lst = NULL;
 	printf("Test 1 - Liste vide : %u\n", ft_lstsize(lst));
-
 	// TEST 2 : Un seul élément
 	one = ft_lstnew("Erasmus");
 	if (!one)
 		return (1);
 	printf("Test 2 - Un element : %u\n", ft_lstsize(one));
-
 	// TEST 3 : Trois éléments
 	two = ft_lstnew("Julie");
-	three = ft_lstnew("Velvet");
+	three = ft_lstnew("vlaval-a");
 	if (!two || !three)
 		return (free(one), 1);
-
 	lst = one;
 	ft_lstadd_front(&lst, two);
 	ft_lstadd_front(&lst, three);
-
 	printf("Test 3 - Trois elements : %u\n", ft_lstsize(lst));
-
 	// TEST 4 : Après un nouvel ajout
 	one = ft_lstnew("Thomas");
 	if (!one)
 		return (1);
 	ft_lstadd_front(&lst, one);
-
 	printf("Test 4 - Quatre elements : %u\n", ft_lstsize(lst));
-
 	// Libération de toute la liste
 	while (lst)
 	{
@@ -93,7 +86,6 @@ int	main(void)
 		free(lst);
 		lst = one;
 	}
-
 	return (0);
 }
 */

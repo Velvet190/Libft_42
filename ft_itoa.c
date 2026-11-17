@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/10 18:08:07 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/12 04:39:00 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:16:37 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:32:44 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
-char	*ft_itoaa(int value, char *str, int base)
+static char	*ft_itoaa(int value, char *str, int base)
 {
 	long	val;
-	long	reste;
+	long	nb;
 
 	val = value;
 	if (val < 0 && base == 10)
@@ -29,11 +28,11 @@ char	*ft_itoaa(int value, char *str, int base)
 	{
 		str = ft_itoaa(val / base, str, base);
 	}
-	reste = val % base;
-	if (reste > 9)
-		*str = (reste - 10) + 'a';
+	nb = val % base;
+	if (nb > 9)
+		*str = (nb - 10) + 'a';
 	else
-		*str = reste + '0';
+		*str = nb + '0';
 	str[1] = '\0';
 	return (str + 1);
 }

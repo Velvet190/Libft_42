@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/09 16:23:31 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/16 15:21:39 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:20:06 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:57:10 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
 
-size_t	ft_verif(char c1, char const *set)
+static size_t	ft_verif(char c1, char const *set)
 {
 	size_t	i;
 

@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 16:42:59 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/03 16:03:21 by vlaval-a         ###   ########.fr       */
+/*   Created: 2026/11/17 18:18:20 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:34:11 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
 void	*ft_memset(void *ptr, int value, size_t num)
 {

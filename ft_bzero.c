@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/03 13:02:52 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/17 00:14:36 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:16:07 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:30:40 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -27,6 +26,10 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 /*
+
+#include <stdio.h>
+#include <string.h>
+
 int	main(void)
 {
 	char	array[] = "Salut";

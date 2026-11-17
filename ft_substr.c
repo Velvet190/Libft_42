@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/09 14:45:04 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/16 15:21:48 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:20:10 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:57:14 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

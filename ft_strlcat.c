@@ -3,28 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/04 11:33:06 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/17 00:31:07 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:19:25 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:56:54 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlenn(char *str, const char *strr)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (str[i])
-		i++;
-	while (strr[j])
-		j++;
-	return (i + j);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -35,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	j = 0;
 	tot = ft_strlen(dst) + ft_strlen(src);
-	if (strlen(dst) >= dstsize)
+	if (ft_strlen(dst) >= dstsize)
 		return (dstsize + ft_strlen(src));
 	if (ft_strlen(dst) >= dstsize)
 		return (tot);

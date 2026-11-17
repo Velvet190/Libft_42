@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/10 15:04:58 by velvet            #+#    #+#             */
-/*   Updated: 2026/11/12 04:37:55 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:18:41 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:34:42 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)

@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/04 11:53:49 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/16 18:34:28 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:20:32 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:55:10 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
+#include <stdlib.h>
 
 typedef struct s_list
 {

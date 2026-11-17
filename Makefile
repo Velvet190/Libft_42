@@ -1,5 +1,5 @@
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 AR = ar
@@ -17,7 +17,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
-%.o: %.c
+%.o: %.c Makefile libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

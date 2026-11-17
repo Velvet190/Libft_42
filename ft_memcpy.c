@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
+/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/03 13:34:07 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/09 14:22:17 by velvet           ###   ########.fr       */
+/*   Created: 2026/11/17 18:18:03 by vlaval-a          #+#    #+#             */
+/*   Updated: 2026/11/17 18:33:26 by vlaval-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
