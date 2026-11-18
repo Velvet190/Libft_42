@@ -6,9 +6,11 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:18:41 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/18 16:02:52 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/18 16:18:34 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -17,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	nn = (long int)n;
 	if (n < 0)
 	{
-		write(fd, "-", 1);
+		ft_putchar_fd('-', fd);
 		nn = -nn;
 	}
 	if (nn > 9)
@@ -25,7 +27,7 @@ void	ft_putnbr_fd(int n, int fd)
 	nn = nn % 10 + '0';
 	ft_putchar_fd(nn, fd);
 }
-
+/*
 #include "libft.h"
 #include <fcntl.h>
 #include <limits.h>
@@ -96,3 +98,4 @@ int	main(void)
 	test(-80808080, 28);
 	return (0);
 }
+*/

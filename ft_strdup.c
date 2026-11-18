@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:19:06 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/18 15:24:44 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/18 20:00:22 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,15 @@ char	*ft_strdup(const char *s)
 	size_t			j;
 	char			*res;
 	unsigned char	*n_s;
-	char			*ree;
 
 	n_s = (unsigned char *)s;
 	if (!s)
-		return(NULL);
+		return (NULL);
 	i = ft_strlen(s);
 	j = 0;
 	res = malloc(i + 1);
 	if (!res)
-		return(NULL);
+		return (NULL);
 	while (j < i)
 	{
 		res[j] = n_s[j];

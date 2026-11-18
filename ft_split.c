@@ -6,13 +6,15 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:18:54 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/18 16:10:14 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/18 20:30:28 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_cntword(const char *str, char sep)
+#include "libft.h"
+
+static int	ft_cntword(char const *str, char c)
 {
 	int	i;
 	int	cnt;
@@ -23,12 +25,12 @@ static int	ft_cntword(const char *str, char sep)
 	tmp = 1;
 	while (str[i])
 	{
-		while (sep == str[i])
+		while (str[i] == c)
 		{
 			tmp = 1;
 			i++;
 		}
-		if (tmp == 1 && sep != str[i] && '\0' != str[i])
+		if (tmp == 1 && str[i] != c && str[i] != '\0')
 		{
 			cnt++;
 			tmp = 0;
@@ -39,80 +41,58 @@ static int	ft_cntword(const char *str, char sep)
 	return (cnt);
 }
 
-static size_t	ft_strlensp(const char *str, char sep, int old)
+static void	free_all(char **tab, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[old] == sep)
+	while (i < n)
 	{
-		old++;
-	}
-	while (str[old] != sep && str[old] != '\0')
-	{
-		old++;
+		free(tab[i]);
 		i++;
 	}
-	return (i);
+	free(tab);
 }
 
-static size_t	ft_strlensp2(const char *str, char sep, int old)
+static int	fill(char **tab, char const *s, char c)
 {
-	while (str[old] == sep)
-	{
-		old++;
-	}
-	while (str[old] != sep && str[old] != '\0')
-	{
-		old++;
-	}
-	return (old);
-}
-
-static void	ft_strprt(const char *str, char *cas, int len, char sep)
-{
-	int	i;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
-	while (*str == sep)
+	while (*s)
 	{
-		str++;
+		if (*s != c)
+		{
+			len = 0;
+			while (s[len] && s[len] != c)
+				len++;
+			tab[i] = ft_substr(s, 0, len);
+			if (!tab[i])
+				return (free_all(tab, i), 0);
+			i++;
+			s += len;
+		}
+		else
+			s++;
 	}
-	while (i < len)
-	{
-		cas[i] = *str;
-		i++;
-		str++;
-	}
-	cas[i] = '\0';
+	tab[i] = NULL;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		old;
-	int		ct;
 	char	**result;
+	int		count;
 
 	if (!s)
 		return (NULL);
-	i = 0;
-	j = 0;
-	old = 0;
-	ct = ft_cntword(s, c);
-	result = malloc(sizeof(char *) * (ct + 1));
-	if(!result)
-		return(NULL)
-	while (i < ct)
-	{
-		j = ft_strlensp(s, c, old);
-		result[i] = malloc(sizeof(char) * (j + 1));
-		ft_strprt(s + old, result[i], j, c);
-		old = ft_strlensp2(s, c, old);
-		i++;
-	}
-	result[i] = NULL;
+	count = ft_cntword(s, c);
+	result = malloc(sizeof(char *) * (count + 1));
+	if (!result)
+		return (NULL);
+	if (!fill(result, s, c))
+		return (NULL);
 	return (result);
 }
 /*
@@ -120,7 +100,7 @@ char	**ft_split(char const *s, char c)
 #include <stdio.h>
 #include <stdlib.h>
 
-char	**ft_split(char const *s, char c);
+char			**ft_split(char const *s, char c);
 
 int	main(void)
 {

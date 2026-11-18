@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:17:25 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/17 18:55:49 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/18 20:00:09 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*first;
 	t_list	*new;
+	void	*content;
 
 	if (!f || !del)
 		return (NULL);
 	first = NULL;
 	while (lst)
 	{
-		new = ft_lstnew((*f)(lst->content));
+		content = f(lst->content);
+		new = ft_lstnew(content);
 		if (!new)
 		{
-			while (first)
-			{
-				new = first->next;
-				(*del)(first->content);
-				free(first);
-				first = new;
-			}
-			lst = NULL;
+			del(content);
+			ft_lstclear(&first, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&first, new);

@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by **vlaval-a**.*
+_This project has been created as part of the 42 curriculum by vlaval-a._
 
 ## Description
 
