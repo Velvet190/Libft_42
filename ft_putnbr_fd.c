@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:18:41 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/17 18:34:42 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/18 16:02:52 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -25,9 +23,9 @@ void	ft_putnbr_fd(int n, int fd)
 	if (nn > 9)
 		ft_putnbr_fd(nn / 10, fd);
 	nn = nn % 10 + '0';
-	write(fd, &nn, 1);
+	ft_putchar_fd(nn, fd);
 }
-/*
+
 #include "libft.h"
 #include <fcntl.h>
 #include <limits.h>
@@ -62,8 +60,7 @@ static void	test(int nbr, int n)
 	ft_putnbr_fd(nbr, fd);
 	lseek(fd, 0, SEEK_SET);
 	result = check_file(expected, fd);
-	printf("TEST %02d | nbr = %d | %s\n",
-		n, nbr, result ? "OK" : "FAIL");
+	printf("TEST %02d | nbr = %d | %s\n", n, nbr, result ? "OK" : "FAIL");
 	close(fd);
 }
 
@@ -99,4 +96,3 @@ int	main(void)
 	test(-80808080, 28);
 	return (0);
 }
-*/

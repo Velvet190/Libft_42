@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:19:25 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/17 18:56:54 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/18 14:43:14 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (dstsize + ft_strlen(src));
 	if (ft_strlen(dst) >= dstsize)
 		return (tot);
-	while (i < dstsize)
+	while (i < dstsize - 1)
 	{
 		while (dst[i] != '\0' && i < dstsize)
 			i++;

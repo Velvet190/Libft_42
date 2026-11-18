@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:18:54 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/17 18:47:22 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/18 16:10:14 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_cntword(const char *str, char sep)
 {
@@ -102,6 +102,8 @@ char	**ft_split(char const *s, char c)
 	old = 0;
 	ct = ft_cntword(s, c);
 	result = malloc(sizeof(char *) * (ct + 1));
+	if(!result)
+		return(NULL)
 	while (i < ct)
 	{
 		j = ft_strlensp(s, c, old);

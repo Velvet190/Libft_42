@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vlaval-a <vlaval-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:17:54 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/17 18:30:14 by vlaval-a         ###   ########.fr       */
+/*   Updated: 2026/11/18 03:27:56 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	n_s1 = (unsigned char *)s1;
 	n_s2 = (unsigned char *)s2;
-	while (n_s1[i] == n_s2[i] && i < n)
+	while (i < n && n_s1[i] == n_s2[i])
 		i++;
 	if (i == n)
 		return (0);

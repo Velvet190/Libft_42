@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:19:19 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/18 03:15:10 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/18 03:24:53 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	res = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!res)
-		return(NULL);
+		return (NULL);
 	while (j < (ft_strlen(s1) + ft_strlen(s2)) && s1[i])
 	{
 		res[i] = s1[i];
