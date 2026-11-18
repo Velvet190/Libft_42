@@ -6,7 +6,7 @@
 /*   By: velvet <velvet@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 18:20:10 by vlaval-a          #+#    #+#             */
-/*   Updated: 2026/11/18 14:52:56 by velvet           ###   ########.fr       */
+/*   Updated: 2026/11/18 23:12:22 by velvet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*res;
-	char	*reserr;
 	size_t	realen;
 
 	i = 0;
 	realen = ft_strlen(s) - (size_t)start;
 	if (len == 0 || start > ft_strlen(s))
 	{
-		reserr = malloc(1);
-		reserr[i] = '\0';
-		return (reserr);
+		res = malloc(1);
+		if (!res)
+			return (NULL);
+		res[i] = '\0';
+		return (res);
 	}
 	res = malloc(realen + 1);
 	if (!res)
