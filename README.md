@@ -1,6 +1,4 @@
-# Libft
-
-*This project has been created as part of the 42 curriculum by **v-laval-a**.*
+*This project has been created as part of the 42 curriculum by **vlaval-a**.*
 
 ## Description
 
